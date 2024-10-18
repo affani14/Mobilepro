@@ -5,7 +5,7 @@ void main(){
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key:key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 }
 
 class Homepage extends StatefulWidget {
-  const Homepage({Key? key}) : super(key:key);
+  const Homepage({super.key});
 
   @override
   State<Homepage> createState() => HomepageState();
@@ -26,13 +26,13 @@ class HomepageState extends State<Homepage> {
   late int index;
 
   List showWidget = [
-    Center(
+    const Center(
       child: Text("Home"),
     ),
-    Center(
+    const Center(
       child: Text("Cart"),
     ),
-    Center(
+    const Center(
       child: Text("Profile"),
     ),
   ];
@@ -47,7 +47,7 @@ class HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bottom Navigation Bar"),
+        title: const Text("Bottom Navigation Bar"),
       ),
       body: showWidget[index],
       bottomNavigationBar: BottomNavigationBar(
@@ -60,7 +60,7 @@ class HomepageState extends State<Homepage> {
               index = value;
             });
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
