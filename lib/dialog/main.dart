@@ -52,5 +52,3 @@ void main() {
       );
     }
   }
-
-  cek cek
